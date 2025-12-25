@@ -2,13 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug with CMake and lldb",
-            "type": "lldb",
+            "name": "Debug with lldb",
+            "type": "lldb", // 依赖 CodeLLDB 插件
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/${workspaceFolderBasename}", // 注意路径变化
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "cmake: build"
+            "preLaunchTask": "clang++ build current file"
+            //      "miDebuggerPath": "/usr/bin/lldb", // 一般不用改
+            //      "setupCommands": [
+            //        {
+            //          "description": "Enable pretty-printing for clang",
+            //          "text": "settings set target.prefer-dynamic-value run-target"
+            //        }
+            //      ]
         }
     ]
 }

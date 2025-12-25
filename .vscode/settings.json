@@ -1,10 +1,59 @@
 {
-    "cmake.configureOnOpen": true, // 打开项目时自动配置 CMake
-    "cmake.generator": "Ninja", // 使用 Ninja 作为生成器（更快），如果系统没有 Ninja，可去掉这行
-    "cmake.buildDirectory": "${workspaceFolder}/build", // 指定构建输出目录
-    // 以下设置是给 C/C++ 扩展（ms-vscode.cpptools）使用的，当使用 CMake 时，它们可以自动配置
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    // 如果您使用更现代的 clangd 作为语言服务器，可以禁用 C/C++ 扩展的智能提示以避免冲突
-    // "C_Cpp.intelliSenseEngine": "disabled",
-    "editor.cursorBlinking": "smooth" // 保留您的编辑器设置
+  "C_Cpp_Runner.cCompilerPath": "/usr/lib/llvm-19/bin",
+  "C_Cpp_Runner.cppCompilerPath": "clang++",
+  "C_Cpp_Runner.debuggerPath": "lldb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wcast-align",
+    "-Wconversion",
+    "-Wsign-conversion",
+    "-Wnull-dereference"
+  ],
+  "C_Cpp_Runner.msvcWarnings": [
+    "/W4",
+    "/permissive-",
+    "/w14242",
+    "/w14287",
+    "/w14296",
+    "/w14311",
+    "/w14826",
+    "/w44062",
+    "/w44242",
+    "/w14905",
+    "/w14906",
+    "/w14263",
+    "/w44265",
+    "/w14928"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.useUndefinedSanitizer": false,
+  "C_Cpp_Runner.useLeakSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
